@@ -1,0 +1,210 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <title>Chase Loveless | Aerospace Engineering Portfolio</title>
+  <meta name="description" content="Mechanical Engineering and Applied Mechanics student at the University of Pennsylvania. Propulsion, thermal systems, and flight hardware." />
+  <meta property="og:title" content="Chase Loveless | Aerospace Engineering Portfolio" />
+  <meta property="og:description" content="Propulsion, thermal systems, and flight hardware: designed, simulated, built, and flown." />
+  <link rel="stylesheet" href="style.css" />
+</head>
+<body>
+  <header class="nav">
+    <a class="logo" href="#top">CHASE LOVELESS</a>
+    <nav>
+      <a href="#projects">Projects</a>
+      <a href="#experience">Experience</a>
+      <a href="#education">Education</a>
+      <a href="#skills">Skills</a>
+      <a href="#contact">Contact</a>
+    </nav>
+  </header>
+
+  <main id="top">
+    <section class="hero">
+      <p class="label">Mechanical Engineering &amp; Applied Mechanics &middot; Penn &rsquo;29</p>
+      <h1>Chase Loveless</h1>
+      <p class="lead">
+        Propulsion, thermal systems, and flight hardware, from CFD and CAD through fabrication and test.
+      </p>
+      <div class="cta">
+        <a class="btn primary" href="#projects">View projects</a>
+        <a class="btn" href="mailto:chaselov@engineering.upenn.edu">Email me</a>
+      </div>
+      <!-- To add a resume button, put resume.pdf in this folder and add:
+           <a class="btn" href="resume.pdf">Resume (PDF)</a> -->
+      <dl class="facts">
+        <div><dt>School</dt><dd>University of Pennsylvania, SEAS</dd></div>
+        <div><dt>Focus</dt><dd>Thermal-fluids, propulsion, structures</dd></div>
+        <div><dt>Seeking</dt><dd>Aerospace &amp; defense internships</dd></div>
+      </dl>
+    </section>
+
+    <section id="projects">
+      <h2><span class="num">01</span> Projects</h2>
+
+      <article class="project">
+        <div class="project-text">
+          <p class="label">Research &middot; Bargatin Group &middot; 2026</p>
+          <h3>Lightweight Microchannel Radiator for Orbital AI Data Centers</h3>
+          <p>
+            In vacuum, radiation is the only way to reject heat, so cooling networks for orbital data centers
+            have to be redesigned around mass. I designed and fabricated a polymer microchannel radiator
+            and manifold network, then optimized its geometry in simulation.
+          </p>
+          <ul>
+            <li>Modeled laminar flow with conjugate heat transfer and surface radiation in COMSOL Multiphysics (370 K inlet, HDPE properties), sweeping geometry to build a mass vs. power-dissipated Pareto frontier.</li>
+            <li>Found two near-optimal geometries; the circular-pipe case (0.22 cm radius) is the more manufacturable.</li>
+            <li>Swept thermal conductivity from 0.1 to 5000 W/m&middot;K and found an optimum near 71 W/m&middot;K: beyond it, heat spreads along the flow and radiator efficiency drops.</li>
+            <li>Developed a thermal-welding method that welds UHMWPE sheets over PFA tubing at 400&deg;C, and a tube-closure approach to isolate punctured sections after a debris strike.</li>
+            <li>Presented at the Penn Summer Research Expo.</li>
+          </ul>
+          <ul class="tags"><li>COMSOL</li><li>Heat transfer</li><li>Radiation</li><li>Fabrication</li><li>Python</li></ul>
+          <a class="link" href="docs/bargatin-poster.pdf">Research poster (PDF) &rarr;</a>
+        </div>
+        <figure class="project-media">
+          <a href="docs/bargatin-poster.pdf"><img src="images/bargatin-poster.jpg" alt="Research poster: Lightweight Microchannel Thermal Management for Orbital AI Data Centers" loading="lazy" /></a>
+          <figcaption>Summer Research Expo poster (placeholder; more photos coming)</figcaption>
+        </figure>
+      </article>
+
+      <article class="project reverse">
+        <div class="project-text">
+          <p class="label">Penn High Power Rocketry &middot; Team Lead &middot; 2025&ndash;Present</p>
+          <h3>L3 Rocket: Recovery, Ejection &amp; Internal Systems</h3>
+          <p>
+            Leading design, integration, and testing of an M-class L3 rocket for the Intercollegiate Rocket
+            Engineering Competition (IREC), and presented the recovery design at IREC 2026 in Midland, TX.
+          </p>
+          <ul>
+            <li>Engineered a thread-based ejection canister that eliminates shock cord entanglement and reduces recovery failure risk in the airframe.</li>
+            <li>Redesigned a split avionics bay to integrate a new airbrake system while maintaining structural alignment and recovery function.</li>
+            <li>Led recovery integration at the launch site: black powder ejection charge packing, parachute, and nose-cone bulkhead installation.</li>
+          </ul>
+          <ul class="tags"><li>SolidWorks</li><li>Recovery systems</li><li>Avionics integration</li><li>Team leadership</li></ul>
+        </div>
+        <figure class="project-media placeholder">
+          <div class="ph">Photo coming soon</div>
+          <figcaption>L3 / IREC 2026</figcaption>
+        </figure>
+      </article>
+
+      <article class="project">
+        <div class="project-text">
+          <p class="label">Penn High Power Rocketry &middot; NAR Level 1 Certification</p>
+          <h3>Custom H-Class Rocket: Level 1 Flight</h3>
+          <p>
+            Designed, fabricated, and launched a custom H-class rocket to earn National Association of Rocketry
+            Level 1 certification, reaching an apogee above 1,000 ft.
+          </p>
+          <ul class="tags"><li>OpenRocket</li><li>Laser cutting</li><li>3D printing</li><li>Flight test</li></ul>
+          <div class="gallery">
+            <a href="images/l1-canister-upright.jpg"><img src="images/l1-canister-upright.jpg" alt="Laser-cut and 3D-printed ejection canister hardware, upright" loading="lazy" /></a>
+            <a href="images/l1-canister-flat.jpg"><img src="images/l1-canister-flat.jpg" alt="Laser-cut and 3D-printed ejection canister hardware, top view" loading="lazy" /></a>
+          </div>
+        </div>
+        <figure class="project-media">
+          <video controls preload="metadata" playsinline>
+            <source src="video/l1-launch.mp4" type="video/mp4" />
+          </video>
+          <figcaption>Launch day</figcaption>
+        </figure>
+      </article>
+
+      <article class="project reverse">
+        <div class="project-text">
+          <p class="label">Penn Jet Propulsion &middot; Engine Development Team &middot; 2026&ndash;Present</p>
+          <h3>Hydrogen Turbofan</h3>
+          <p>
+            Part of the team developing Penn&rsquo;s first undergraduate hydrogen turbofan.
+          </p>
+          <ul>
+            <li>Contributing to propulsion-system design, analysis, fabrication, and testing.</li>
+            <li>Supporting turbofan hardware development through CAD, CFD/FEA, and component integration, and preparing for hot-fire testing.</li>
+          </ul>
+          <ul class="tags"><li>CAD</li><li>CFD / FEA</li><li>Propulsion</li><li>Ansys</li></ul>
+        </div>
+        <figure class="project-media placeholder">
+          <div class="ph">Photo coming soon</div>
+          <figcaption>Hydrogen turbofan</figcaption>
+        </figure>
+      </article>
+    </section>
+
+    <section id="experience">
+      <h2><span class="num">02</span> Experience</h2>
+      <ol class="timeline">
+        <li>
+          <span class="date">May 2026 &ndash; Present</span>
+          <div>
+            <h3>Orbital AI Data Center Researcher</h3>
+            <p class="meta">Bargatin Group, Penn Mechanical Engineering &amp; Applied Mechanics</p>
+            <p>Microchannel radiator design, COMSOL simulation, and prototype fabrication and leak testing for space-based thermal management.</p>
+          </div>
+        </li>
+        <li>
+          <span class="date">Sep 2025 &ndash; Present</span>
+          <div>
+            <h3>Recovery, Ejection &amp; Internal Systems Team Lead</h3>
+            <p class="meta">Penn High Power Rocketry</p>
+            <p>Promoted to team lead; lead design, integration, and testing of an M-class L3 rocket for IREC.</p>
+          </div>
+        </li>
+        <li>
+          <span class="date">Sep 2026 &ndash; Present</span>
+          <div>
+            <h3>Hydrogen Turbofan Engineer</h3>
+            <p class="meta">Penn Jet Propulsion</p>
+            <p>Propulsion-system design, analysis, fabrication, and testing on Penn&rsquo;s first undergraduate hydrogen turbofan.</p>
+          </div>
+        </li>
+        <li>
+          <span class="date">Jun &ndash; Jul 2024</span>
+          <div>
+            <h3>Aerospace Engineering Program</h3>
+            <p class="meta">Northwestern University</p>
+            <p>Modeled and simulated jet propulsion modules in SolidWorks, and analyzed subsonic, transonic, and supersonic airfoils (including F-16 and NASA X-59 QueSST configurations) for lift, drag, and wave drag.</p>
+          </div>
+        </li>
+        <li>
+          <span class="date">Oct 2023 &ndash; Feb 2025</span>
+          <div>
+            <h3>Instructor</h3>
+            <p class="meta">Mathnasium, San Francisco</p>
+            <p>Taught single-variable calculus to over 40 students and tutored 30 more for placement exams.</p>
+          </div>
+        </li>
+      </ol>
+    </section>
+
+    <section id="education">
+      <h2><span class="num">03</span> Education</h2>
+      <div class="card">
+        <div class="row"><h3>University of Pennsylvania, School of Engineering and Applied Science</h3><span class="date">Aug 2025 &ndash; May 2029</span></div>
+        <p>B.S.E. Mechanical Engineering and Applied Mechanics &middot; Minor in Quantum Physics &middot; GPA 3.95/4.00</p>
+        <p class="meta">Coursework: Structural Analysis, Thermal-Fluids Engineering, Computational Physics, Linear Algebra</p>
+      </div>
+    </section>
+
+    <section id="skills">
+      <h2><span class="num">04</span> Skills</h2>
+      <div class="skills">
+        <div><h3>Software</h3><p>SolidWorks, Onshape, Ansys, COMSOL, DraftSight, OpenRocket</p></div>
+        <div><h3>Programming</h3><p>Python, MATLAB, VPython, C++</p></div>
+        <div><h3>Fabrication</h3><p>3D printing, laser cutting, soldering, thermal welding</p></div>
+        <div><h3>Certifications</h3><p>Certified SolidWorks Associate (CSWA), NAR Level 1 High Power Rocketry</p></div>
+      </div>
+    </section>
+
+    <section id="contact">
+      <h2><span class="num">05</span> Contact</h2>
+      <p>I&rsquo;m looking for aerospace and defense internships. The best way to reach me is email.</p>
+      <p><a class="btn primary" href="mailto:chaselov@engineering.upenn.edu">chaselov@engineering.upenn.edu</a></p>
+    </section>
+  </main>
+
+  <footer>&copy; <span id="year"></span> Chase Loveless</footer>
+  <script src="script.js"></script>
+</body>
+</html>
