@@ -1,28 +1,36 @@
-// ---------- Intro: a rocket flies across and reveals the name ----------
+// ---------- Intro: a rocket flies across and reveals the name (plays on every load) ----------
 (function () {
   const h1 = document.querySelector(".hero h1");
   if (!h1) return;
   if (window.matchMedia("(prefers-reduced-motion: reduce)").matches) return;
   if (window.scrollY > 50 || location.hash) return;
-  try { if (sessionStorage.getItem("rocketIntro")) return; sessionStorage.setItem("rocketIntro", "1"); } catch (e) {}
 
   const rocket = document.createElement("div");
   rocket.className = "rocket-fly";
   rocket.setAttribute("aria-hidden", "true");
-  rocket.innerHTML = '<svg viewBox="0 0 130 40"><defs><linearGradient id="fl" x1="1" x2="0"><stop offset="0" stop-color="#f6b042"/><stop offset=".6" stop-color="#ef6a2a"/><stop offset="1" stop-color="#ef6a2a" stop-opacity="0"/></linearGradient></defs>'
-    + '<g class="flame"><path d="M24 20 L-6 12 Q8 20 -6 28 Z" fill="url(#fl)"/></g>'
-    + '<path d="M34 8 L50 2 L46 14 Z M34 32 L50 38 L46 26 Z" fill="#0f3a75"/>'
-    + '<path d="M22 12 Q22 8 28 8 L84 8 Q112 10 126 20 Q112 30 84 32 L28 32 Q22 32 22 28 Z" fill="#f4f6fa" stroke="#9aa6b8" stroke-width="1.2"/>'
-    + '<path d="M84 8 Q112 10 126 20 Q112 30 84 32 Q96 20 84 8 Z" fill="#0f3a75"/>'
-    + '<rect x="56" y="8" width="6" height="24" fill="#0f3a75"/><circle cx="72" cy="20" r="5" fill="#cfe0f5" stroke="#0f3a75" stroke-width="1.5"/></svg>';
+  rocket.innerHTML = '<svg viewBox="0 0 200 60"><defs>'
+    + '<linearGradient id="rBody" x1="0" y1="0" x2="0" y2="1"><stop offset="0" stop-color="#ffffff"/><stop offset=".18" stop-color="#dfe5ee"/><stop offset=".5" stop-color="#9aa6b6"/><stop offset=".78" stop-color="#e8edf4"/><stop offset="1" stop-color="#5f6b7c"/></linearGradient>'
+    + '<linearGradient id="rNose" x1="0" y1="0" x2="0" y2="1"><stop offset="0" stop-color="#6fa0e8"/><stop offset=".25" stop-color="#2a5fb8"/><stop offset=".6" stop-color="#12306a"/><stop offset="1" stop-color="#4b7bd0"/></linearGradient>'
+    + '<linearGradient id="rFin" x1="0" y1="0" x2="1" y2="1"><stop offset="0" stop-color="#4a5a73"/><stop offset=".5" stop-color="#9fb0c8"/><stop offset="1" stop-color="#2c3a52"/></linearGradient>'
+    + '<radialGradient id="rWin" cx=".35" cy=".3" r=".8"><stop offset="0" stop-color="#ffffff"/><stop offset=".35" stop-color="#9fd0ff"/><stop offset="1" stop-color="#0f3a75"/></radialGradient>'
+    + '<linearGradient id="rFlame" x1="1" y1="0" x2="0" y2="0"><stop offset="0" stop-color="#fff6cc"/><stop offset=".25" stop-color="#ffc247"/><stop offset=".6" stop-color="#ef5a22" stop-opacity=".9"/><stop offset="1" stop-color="#ef5a22" stop-opacity="0"/></linearGradient>'
+    + '</defs>'
+    + '<g class="flame"><path d="M26 22 L-60 30 L26 38 Z" fill="url(#rFlame)"/><path d="M26 25 L-15 30 L26 35 Z" fill="#fffbe6" opacity=".9"/></g>'
+    + '<path d="M44 16 L80 16 L63 1 L46 4 Z M44 44 L80 44 L63 59 L46 56 Z" fill="url(#rFin)" stroke="#2c3a52" stroke-width=".8"/>'
+    + '<path d="M33 24 L22 21 L22 39 L33 36 Z" fill="#3a4658" stroke="#1d2735" stroke-width=".8"/>'
+    + '<path d="M38 16 L150 16 L150 44 L38 44 Q32 44 32 38 L32 22 Q32 16 38 16 Z" fill="url(#rBody)" stroke="#6b7789" stroke-width=".9"/>'
+    + '<path d="M150 16 Q184 18 198 30 Q184 42 150 44 Z" fill="url(#rNose)" stroke="#0d2552" stroke-width=".9"/>'
+    + '<rect x="94" y="16" width="9" height="28" fill="url(#rNose)"/><rect x="132" y="16" width="3" height="28" fill="#6b7789" opacity=".7"/>'
+    + '<circle cx="118" cy="30" r="8" fill="url(#rWin)" stroke="#3a4658" stroke-width="2"/>'
+    + '<rect x="38" y="19" width="108" height="3.5" rx="1.7" fill="#fff" opacity=".7"/>'
+    + '<path d="M156 21 Q176 22 188 28" stroke="#fff" stroke-width="2" fill="none" opacity=".55" stroke-linecap="round"/></svg>';
   document.body.appendChild(rocket);
 
   const r = h1.getBoundingClientRect();
   const w = h1.offsetWidth;
-  const noseOffset = 126;               // nose x within the 130px rocket
-  const y = r.top + r.height / 2 - 20;
-  rocket.style.top = y + "px";
-  const start = -140, end = window.innerWidth + 20, dur = 2600, t0 = performance.now();
+  const noseOffset = 198;               // nose tip x within the 200px rocket
+  rocket.style.top = (r.top + r.height / 2 - 30) + "px";
+  const start = -280, end = window.innerWidth + 40, dur = 5000, t0 = performance.now();
   h1.style.clipPath = "inset(-10px " + w + "px -10px 0)";
 
   function frame(now) {
