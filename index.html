@@ -7,7 +7,7 @@
   <meta name="description" content="Mechanical Engineering and Applied Mechanics student at the University of Pennsylvania. Propulsion, thermal systems, and flight hardware." />
   <meta property="og:title" content="Chase Loveless | Aerospace Engineering Portfolio" />
   <meta property="og:description" content="Propulsion, thermal systems, and flight hardware: designed, simulated, built, and flown." />
-  <link rel="stylesheet" href="style.css?v=4" />
+  <link rel="stylesheet" href="style.css?v=5" />
 </head>
 <body>
   <header class="nav">
@@ -44,121 +44,9 @@
 
     <section id="projects">
       <h2>Projects</h2>
-
-      <article class="project">
-        <div class="project-text">
-          <p class="label">Research &middot; Bargatin Group &middot; 2026</p>
-          <h3>Lightweight Microchannel Radiator for Orbital AI Data Centers</h3>
-          <p>
-            In vacuum, radiation is the only way to reject heat, so cooling networks for orbital data centers
-            have to be redesigned around mass. I designed and fabricated a polymer microchannel radiator
-            and manifold network, then optimized its geometry in simulation.
-          </p>
-          <ul>
-            <li>Modeled laminar flow with conjugate heat transfer and surface radiation in COMSOL Multiphysics (370 K inlet, HDPE properties), sweeping geometry to build a mass vs. power-dissipated Pareto frontier.</li>
-            <li>Found two near-optimal geometries; the circular-pipe case (0.22 cm radius) is the more manufacturable.</li>
-            <li>Swept thermal conductivity from 0.1 to 5000 W/m&middot;K and found an optimum near 71 W/m&middot;K: beyond it, heat spreads along the flow and radiator efficiency drops.</li>
-            <li>Developed a thermal-welding method that welds UHMWPE sheets over PFA tubing at 400&deg;C, and a tube-closure approach to isolate punctured sections after a debris strike.</li>
-            <li>Presented at the Penn Summer Research Expo.</li>
-          </ul>
-          <ul class="tags"><li>COMSOL</li><li>Heat transfer</li><li>Radiation</li><li>Fabrication</li><li>Python</li></ul>
-          <a class="link" href="docs/bargatin-poster.pdf">Research poster (PDF) &rarr;</a>
-        </div>
-        <figure class="project-media">
-          <a href="docs/bargatin-poster.pdf"><img src="images/bargatin-poster.jpg" alt="Research poster: Lightweight Microchannel Thermal Management for Orbital AI Data Centers" loading="lazy" /></a>
-          <figcaption>Summer Research Expo poster (placeholder; more photos coming)</figcaption>
-        </figure>
-      </article>
-
-      <article class="project reverse">
-        <div class="project-text">
-          <p class="label">Penn High Power Rocketry &middot; Team Lead &middot; 2025&ndash;Present</p>
-          <h3>L3 Rocket: Recovery, Ejection &amp; Internal Systems</h3>
-          <p>
-            Leading design, integration, and testing of an M-class L3 rocket for the Intercollegiate Rocket
-            Engineering Competition (IREC), and presented the recovery design at IREC 2026 in Midland, TX.
-          </p>
-          <ul>
-            <li>Engineered a thread-based ejection canister that eliminates shock cord entanglement and reduces recovery failure risk in the airframe.</li>
-            <li>Redesigned a split avionics bay to integrate a new airbrake system while maintaining structural alignment and recovery function.</li>
-            <li>Led recovery integration at the launch site: black powder ejection charge packing, parachute, and nose-cone bulkhead installation.</li>
-          </ul>
-          <ul class="tags"><li>SolidWorks</li><li>Recovery systems</li><li>Avionics integration</li><li>Team leadership</li></ul>
-        </div>
-        <figure class="project-media placeholder">
-          <div class="ph">Photo coming soon</div>
-          <figcaption>L3 / IREC 2026</figcaption>
-        </figure>
-      </article>
-
-      <article class="project viewer-card">
-        <div class="project-text">
-          <p class="label">Penn High Power Rocketry &middot; Tripoli Level 1 Certification</p>
-          <h3>Custom H-Class Rocket: Level 1</h3>
-          <p>
-            Designed, fabricated, and launched a custom H-class rocket to earn Tripoli Rocketry Association
-            Level 1 certification, reaching an apogee above 1,000 ft.
-          </p>
-          <ul class="tags"><li>OpenRocket</li><li>CAD</li><li>Laser cutting</li><li>3D printing</li><li>Flight test</li></ul>
-          <p class="hint">Click a photo to view it larger.</p>
-          <div class="thumbs">
-            <button type="button" class="thumb active" aria-pressed="true" data-type="video" data-src="l1/launch-video.mp4" data-caption="Launch Video" data-poster="l1/launch-video-poster.jpg">
-              <span class="thumb-img"><img src="l1/t-launch-video.jpg" alt="" loading="lazy" /><span class="play" aria-hidden="true"></span></span>
-              <span class="cap">Launch Video</span>
-            </button>
-            <button type="button" class="thumb" aria-pressed="false" data-type="image" data-src="l1/openrocket-schematic.jpg" data-caption="OpenRocket Schematic">
-              <span class="thumb-img"><img src="l1/t-openrocket-schematic.jpg" alt="" loading="lazy" /></span>
-              <span class="cap">OpenRocket Schematic</span>
-            </button>
-            <button type="button" class="thumb" aria-pressed="false" data-type="image" data-src="l1/motor-retainer.jpg" data-caption="Custom Motor Retainer">
-              <span class="thumb-img"><img src="l1/t-motor-retainer.jpg" alt="" loading="lazy" /></span>
-              <span class="cap">Custom Motor Retainer</span>
-            </button>
-            <button type="button" class="thumb" aria-pressed="false" data-type="image" data-src="l1/centering-rings.jpg" data-caption="Centering Rings">
-              <span class="thumb-img"><img src="l1/t-centering-rings.jpg" alt="" loading="lazy" /></span>
-              <span class="cap">Centering Rings</span>
-            </button>
-            <button type="button" class="thumb" aria-pressed="false" data-type="image" data-src="l1/launch-pad.jpg" data-caption="Rocket on Launch Pad">
-              <span class="thumb-img"><img src="l1/t-launch-pad.jpg" alt="" loading="lazy" /></span>
-              <span class="cap">Rocket on Launch Pad</span>
-            </button>
-            <button type="button" class="thumb" aria-pressed="false" data-type="image" data-src="l1/post-launch.jpg" data-caption="Post-Launch Recovery and Separation">
-              <span class="thumb-img"><img src="l1/t-post-launch.jpg" alt="" loading="lazy" /></span>
-              <span class="cap">Post-Launch Recovery and Separation</span>
-            </button>
-          </div>
-        </div>
-        <figure class="project-media viewer">
-          <div class="stage">
-            <video controls preload="metadata" playsinline poster="l1/launch-video-poster.jpg">
-              <source src="l1/launch-video.mp4" type="video/mp4" />
-            </video>
-          </div>
-          <figcaption class="viewer-caption">
-            <span class="vc-title">Launch Video</span>
-            <a class="vc-open" href="#" target="_blank" rel="noopener" hidden>Open full size &#8599;</a>
-          </figcaption>
-        </figure>
-      </article>
-
-      <article class="project reverse">
-        <div class="project-text">
-          <p class="label">Penn Jet Propulsion &middot; Engine Development Team &middot; 2026&ndash;Present</p>
-          <h3>Hydrogen Turbofan</h3>
-          <p>
-            Part of the team developing Penn&rsquo;s first undergraduate hydrogen turbofan.
-          </p>
-          <ul>
-            <li>Contributing to propulsion-system design, analysis, fabrication, and testing.</li>
-            <li>Supporting turbofan hardware development through CAD, CFD/FEA, and component integration, and preparing for hot-fire testing.</li>
-          </ul>
-          <ul class="tags"><li>CAD</li><li>CFD / FEA</li><li>Propulsion</li><li>Ansys</li></ul>
-        </div>
-        <figure class="project-media placeholder">
-          <div class="ph">Photo coming soon</div>
-          <figcaption>Hydrogen turbofan</figcaption>
-        </figure>
-      </article>
+      <div class="project-grid" id="project-grid">
+        <noscript><p>Please enable JavaScript to view the project details.</p></noscript>
+      </div>
     </section>
 
     <section id="experience">
@@ -251,6 +139,19 @@
   </main>
 
   <footer>&copy; <span id="year"></span> Chase Loveless</footer>
-  <script src="script.js?v=4"></script>
+  <!-- Project detail view (filled in by script.js) -->
+  <div class="pv" id="project-view" role="dialog" aria-modal="true" aria-labelledby="pv-title" hidden></div>
+
+  <!-- Photo lightbox -->
+  <div class="lb" id="lightbox" role="dialog" aria-modal="true" aria-label="Photo viewer" hidden>
+    <button type="button" class="lb-btn lb-close" aria-label="Close photo">&times;</button>
+    <button type="button" class="lb-btn lb-prev" aria-label="Previous photo">&#8249;</button>
+    <img alt="" />
+    <p class="lb-cap"></p>
+    <button type="button" class="lb-btn lb-next" aria-label="Next photo">&#8250;</button>
+  </div>
+
+  <script src="projects.js?v=5"></script>
+  <script src="script.js?v=5"></script>
 </body>
 </html>
