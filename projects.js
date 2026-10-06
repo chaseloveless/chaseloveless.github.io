@@ -44,17 +44,18 @@ window.PROJECTS = [
   },
   {
     id: "l3-rocket",
-    title: "L3 Rocket",
-    subtitle: "Recovery, ejection, and internal systems for an M-class rocket",
+    title: "Level 3 Competition Rocket (ELGSES)",
+    subtitle: "ELGSES: recovery, ejection, and internal systems for an M-class competition rocket",
     tags: ["Aerospace", "Recovery"],
     dates: "Sep 2025 – Present",
-    summary: "Leading recovery, ejection, and internal systems for an M-class rocket built for the International Rocket Engineering Competition (IREC).",
-    cover: null,
+    summary: "Leading recovery, ejection, and internal systems for ELGSES, an M-class rocket built for the International Rocket Engineering Competition (IREC).",
+    cover: "l3/team.jpg",
+    coverAlt: "The Penn High Power Rocketry team with the ELGSES rocket",
     role: "Recovery, Ejection & Internal Systems Team Lead",
     org: "Penn High Power Rocketry",
     timeline: "September 2025 – Present",
     synopsis: [
-      "Penn High Power Rocketry's L3 rocket is an M-class vehicle built to compete in the International Rocket Engineering Competition (IREC).",
+      "ELGSES is Penn High Power Rocketry's Level 3 rocket, an M-class vehicle built to compete in the International Rocket Engineering Competition (IREC).",
       "I lead the Recovery, Ejection, and Internal Systems team: the subsystems that separate the airframe, deploy the parachute, and house the avionics. This season's work focused on making recovery more reliable and on fitting a new airbrake system into the airframe.",
       "At IREC 2026 in Midland, TX, I represented Penn, presented the new ejection canister design to competition judges, and led recovery system integration at the launch site."
     ],
@@ -65,10 +66,26 @@ window.PROJECTS = [
       "Represented Penn at IREC 2026 in Midland, TX, presenting the ejection canister design and its implementation to competition judges.",
       "Led recovery system integration at the launch site, including black powder ejection charge packing, parachute, and nose-cone bulkhead installation."
     ],
-    tools: ["SolidWorks", "Recovery systems", "Avionics integration", "Team leadership"],
-    facts: [],
-    photos: [],
-    videos: [],
+    tools: ["SolidWorks", "OpenRocket", "Recovery systems", "Avionics integration", "Team leadership"],
+    factsNote: "Values from the OpenRocket simulation.",
+    facts: [
+      { value: "M2500T-P", label: "Motor" },
+      { value: "151 in × 6.17 in", label: "Length × max diameter" },
+      { value: "1126 oz", label: "Mass with motor" },
+      { value: "2.06 cal", label: "Stability" },
+      { value: "8420 ft", label: "Simulated apogee" },
+      { value: "855 ft/s (Mach 0.778)", label: "Max velocity" },
+      { value: "271 ft/s²", label: "Max acceleration" }
+    ],
+    photos: [
+      { src: "l3/elgses-pad.jpg", thumb: "l3/g-elgses-pad.jpg", caption: "ELGSES on the Launch Pad", pos: "50% 55%" },
+      { src: "l3/team.jpg", thumb: "l3/g-team.jpg", caption: "ELGSES with the Penn High Power Rocketry Team" },
+      { src: "l3/openrocket-schematic.jpg", thumb: "l3/g-openrocket-schematic.jpg", caption: "OpenRocket Schematic", fit: "contain" }
+    ],
+    videos: [
+      { src: "l3/launch.mp4", poster: "l3/launch-poster.jpg", caption: "Launch" },
+      { src: "l3/drogue-static-test.mp4", poster: "l3/drogue-static-test-poster.jpg", caption: "Drogue Static Test" }
+    ],
     links: []
   },
   {
@@ -106,40 +123,15 @@ window.PROJECTS = [
       { value: "289 ft/s²", label: "Max acceleration" }
     ],
     photos: [
+      { src: "l1/launch-pad.jpg", thumb: "l1/g-launch-pad.jpg", caption: "Rocket on Launch Pad" },
       { src: "l1/openrocket-schematic.jpg", thumb: "l1/g-openrocket-schematic.jpg", caption: "OpenRocket Schematic", fit: "contain" },
       { src: "l1/motor-retainer.jpg", thumb: "l1/g-motor-retainer.jpg", caption: "Custom Motor Retainer", pos: "50% 45%" },
       { src: "l1/centering-rings.jpg", thumb: "l1/g-centering-rings.jpg", caption: "Centering Rings" },
-      { src: "l1/launch-pad.jpg", thumb: "l1/g-launch-pad.jpg", caption: "Rocket on Launch Pad", pos: "50% 60%" },
       { src: "l1/post-launch.jpg", thumb: "l1/g-post-launch.jpg", caption: "Post-Launch Recovery and Separation", pos: "50% 55%" }
     ],
     videos: [
       { src: "l1/launch-video.mp4", poster: "l1/launch-video-poster.jpg", caption: "Launch Video" }
     ],
-    links: []
-  },
-  {
-    id: "hydrogen-turbofan",
-    title: "Hydrogen Turbofan",
-    subtitle: "Penn's first undergraduate hydrogen turbofan engine",
-    tags: ["Propulsion", "CFD / FEA"],
-    dates: "Sep 2026 – Present",
-    summary: "Contributing to the design, analysis, and fabrication of Penn Jet Propulsion's first undergraduate hydrogen turbofan.",
-    cover: null,
-    role: "Hydrogen Turbofan Engineer, Engine Development Team",
-    org: "Penn Jet Propulsion",
-    timeline: "September 2026 – Present",
-    synopsis: [
-      "Penn Jet Propulsion's Engine Development Team is building the first hydrogen turbofan developed by Penn undergraduates.",
-      "I joined the team in September 2026 and contribute across the development loop: propulsion-system design and analysis using CAD, CFD, and FEA, component integration, and fabrication, as the team prepares for hot-fire testing."
-    ],
-    roles: [
-      "Joined the Engine Development Team developing the first Penn undergraduate hydrogen turbofan, contributing to propulsion-system design, analysis, fabrication, and testing.",
-      "Support the development of turbofan hardware through CAD, CFD/FEA, component integration, and preparation for hot-fire testing."
-    ],
-    tools: ["CAD", "CFD", "FEA", "Propulsion", "Component integration"],
-    facts: [],
-    photos: [],
-    videos: [],
     links: []
   }
 ];
