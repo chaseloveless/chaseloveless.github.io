@@ -28,7 +28,7 @@
 
   const r = h1.getBoundingClientRect();
   const w = h1.offsetWidth;
-  const noseOffset = 198;               // nose tip x within the 200px rocket
+  const noseOffset = 22;                // tail (nozzle) x within the 200px rocket: name appears behind the rocket
   rocket.style.top = (r.top + r.height / 2 - 30) + "px";
   const start = -280, end = window.innerWidth + 40, dur = 5000, t0 = performance.now();
   h1.style.clipPath = "inset(-10px " + w + "px -10px 0)";
