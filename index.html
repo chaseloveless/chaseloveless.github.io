@@ -7,7 +7,7 @@
   <meta name="description" content="Mechanical Engineering and Applied Mechanics student at the University of Pennsylvania. Propulsion, thermal systems, and flight hardware." />
   <meta property="og:title" content="Chase Loveless | Aerospace Engineering Portfolio" />
   <meta property="og:description" content="Propulsion, thermal systems, and flight hardware: designed, simulated, built, and flown." />
-  <link rel="stylesheet" href="style.css?v=2" />
+  <link rel="stylesheet" href="style.css?v=4" />
 </head>
 <body>
   <header class="nav">
@@ -91,25 +91,53 @@
         </figure>
       </article>
 
-      <article class="project">
+      <article class="project viewer-card">
         <div class="project-text">
           <p class="label">Penn High Power Rocketry &middot; Tripoli Level 1 Certification</p>
-          <h3>Custom H-Class Rocket: Level 1 Flight</h3>
+          <h3>Custom H-Class Rocket: Level 1</h3>
           <p>
             Designed, fabricated, and launched a custom H-class rocket to earn Tripoli Rocketry Association
             Level 1 certification, reaching an apogee above 1,000 ft.
           </p>
-          <ul class="tags"><li>OpenRocket</li><li>Laser cutting</li><li>3D printing</li><li>Flight test</li></ul>
-          <div class="gallery">
-            <a href="images/l1-canister-upright.jpg"><img src="images/l1-canister-upright.jpg" alt="Laser-cut and 3D-printed ejection canister hardware, upright" loading="lazy" /></a>
-            <a href="images/l1-canister-flat.jpg"><img src="images/l1-canister-flat.jpg" alt="Laser-cut and 3D-printed ejection canister hardware, top view" loading="lazy" /></a>
+          <ul class="tags"><li>OpenRocket</li><li>CAD</li><li>Laser cutting</li><li>3D printing</li><li>Flight test</li></ul>
+          <p class="hint">Click a photo to view it larger.</p>
+          <div class="thumbs">
+            <button type="button" class="thumb active" aria-pressed="true" data-type="video" data-src="l1/launch-video.mp4" data-caption="Launch Video" data-poster="l1/launch-video-poster.jpg">
+              <span class="thumb-img"><img src="l1/t-launch-video.jpg" alt="" loading="lazy" /><span class="play" aria-hidden="true"></span></span>
+              <span class="cap">Launch Video</span>
+            </button>
+            <button type="button" class="thumb" aria-pressed="false" data-type="image" data-src="l1/openrocket-schematic.jpg" data-caption="OpenRocket Schematic">
+              <span class="thumb-img"><img src="l1/t-openrocket-schematic.jpg" alt="" loading="lazy" /></span>
+              <span class="cap">OpenRocket Schematic</span>
+            </button>
+            <button type="button" class="thumb" aria-pressed="false" data-type="image" data-src="l1/motor-retainer.jpg" data-caption="Custom Motor Retainer">
+              <span class="thumb-img"><img src="l1/t-motor-retainer.jpg" alt="" loading="lazy" /></span>
+              <span class="cap">Custom Motor Retainer</span>
+            </button>
+            <button type="button" class="thumb" aria-pressed="false" data-type="image" data-src="l1/centering-rings.jpg" data-caption="Centering Rings">
+              <span class="thumb-img"><img src="l1/t-centering-rings.jpg" alt="" loading="lazy" /></span>
+              <span class="cap">Centering Rings</span>
+            </button>
+            <button type="button" class="thumb" aria-pressed="false" data-type="image" data-src="l1/launch-pad.jpg" data-caption="Rocket on Launch Pad">
+              <span class="thumb-img"><img src="l1/t-launch-pad.jpg" alt="" loading="lazy" /></span>
+              <span class="cap">Rocket on Launch Pad</span>
+            </button>
+            <button type="button" class="thumb" aria-pressed="false" data-type="image" data-src="l1/post-launch.jpg" data-caption="Post-Launch Recovery and Separation">
+              <span class="thumb-img"><img src="l1/t-post-launch.jpg" alt="" loading="lazy" /></span>
+              <span class="cap">Post-Launch Recovery and Separation</span>
+            </button>
           </div>
         </div>
-        <figure class="project-media">
-          <video controls preload="metadata" playsinline>
-            <source src="video/l1-launch.mp4" type="video/mp4" />
-          </video>
-          <figcaption>Launch day</figcaption>
+        <figure class="project-media viewer">
+          <div class="stage">
+            <video controls preload="metadata" playsinline poster="l1/launch-video-poster.jpg">
+              <source src="l1/launch-video.mp4" type="video/mp4" />
+            </video>
+          </div>
+          <figcaption class="viewer-caption">
+            <span class="vc-title">Launch Video</span>
+            <a class="vc-open" href="#" target="_blank" rel="noopener" hidden>Open full size &#8599;</a>
+          </figcaption>
         </figure>
       </article>
 
@@ -217,12 +245,12 @@
 
     <section id="contact">
       <h2>Contact</h2>
-      <p>I&rsquo;m happy to connect.</p>
+      <p>I&rsquo;m happy to connect, so please feel free to contact me!</p>
       <p><a class="btn primary" href="mailto:chaselov@engineering.upenn.edu">chaselov@engineering.upenn.edu</a></p>
     </section>
   </main>
 
   <footer>&copy; <span id="year"></span> Chase Loveless</footer>
-  <script src="script.js?v=2"></script>
+  <script src="script.js?v=4"></script>
 </body>
 </html>
