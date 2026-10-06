@@ -1,3 +1,43 @@
+// ---------- Intro: a rocket flies across and reveals the name ----------
+(function () {
+  const h1 = document.querySelector(".hero h1");
+  if (!h1) return;
+  if (window.matchMedia("(prefers-reduced-motion: reduce)").matches) return;
+  if (window.scrollY > 50 || location.hash) return;
+  try { if (sessionStorage.getItem("rocketIntro")) return; sessionStorage.setItem("rocketIntro", "1"); } catch (e) {}
+
+  const rocket = document.createElement("div");
+  rocket.className = "rocket-fly";
+  rocket.setAttribute("aria-hidden", "true");
+  rocket.innerHTML = '<svg viewBox="0 0 130 40"><defs><linearGradient id="fl" x1="1" x2="0"><stop offset="0" stop-color="#f6b042"/><stop offset=".6" stop-color="#ef6a2a"/><stop offset="1" stop-color="#ef6a2a" stop-opacity="0"/></linearGradient></defs>'
+    + '<g class="flame"><path d="M24 20 L-6 12 Q8 20 -6 28 Z" fill="url(#fl)"/></g>'
+    + '<path d="M34 8 L50 2 L46 14 Z M34 32 L50 38 L46 26 Z" fill="#0f3a75"/>'
+    + '<path d="M22 12 Q22 8 28 8 L84 8 Q112 10 126 20 Q112 30 84 32 L28 32 Q22 32 22 28 Z" fill="#f4f6fa" stroke="#9aa6b8" stroke-width="1.2"/>'
+    + '<path d="M84 8 Q112 10 126 20 Q112 30 84 32 Q96 20 84 8 Z" fill="#0f3a75"/>'
+    + '<rect x="56" y="8" width="6" height="24" fill="#0f3a75"/><circle cx="72" cy="20" r="5" fill="#cfe0f5" stroke="#0f3a75" stroke-width="1.5"/></svg>';
+  document.body.appendChild(rocket);
+
+  const r = h1.getBoundingClientRect();
+  const w = h1.offsetWidth;
+  const noseOffset = 126;               // nose x within the 130px rocket
+  const y = r.top + r.height / 2 - 20;
+  rocket.style.top = y + "px";
+  const start = -140, end = window.innerWidth + 20, dur = 2600, t0 = performance.now();
+  h1.style.clipPath = "inset(-10px " + w + "px -10px 0)";
+
+  function frame(now) {
+    const p = Math.min(1, (now - t0) / dur);
+    const e = p < .5 ? 2 * p * p : 1 - Math.pow(-2 * p + 2, 2) / 2;   // ease in-out
+    const x = start + (end - start) * e;
+    rocket.style.transform = "translateX(" + x + "px)";
+    const reveal = Math.max(0, Math.min(w, x + noseOffset - r.left));
+    h1.style.clipPath = "inset(-10px " + (w - reveal) + "px -10px 0)";
+    if (p < 1) requestAnimationFrame(frame);
+    else { h1.style.clipPath = ""; rocket.remove(); }
+  }
+  requestAnimationFrame(frame);
+})();
+
 document.getElementById("year").textContent = new Date().getFullYear();
 
 // ---------- Nav: highlight the section currently in view ----------
