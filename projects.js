@@ -143,5 +143,52 @@ window.PROJECTS = [
       { src: "l1/launch-video.mp4", poster: "l1/launch-video-poster.jpg", caption: "Launch Video" }
     ],
     links: []
+  },
+  {
+    id: "deployable-payload-vehicle",
+    title: "Deployable Payload Test Vehicle",
+    subtitle: "A test rocket that proved a deployable payload, a custom flight computer, and line-cutter recovery",
+    tags: ["Rocketry", "Avionics", "Fabrication"],
+    dates: "2025 – 2026",
+    summary: "With a team, built a rocket to test a deployable payload released by a custom flight computer and Piranha line cutters. The payload ejected and descended successfully on launch.",
+    cover: "dpv/cover.jpg",
+    coverAlt: "The completed Deployable Payload Test Vehicle standing upright",
+    role: "Team Member, Fabrication & Integration",
+    org: "Penn High Power Rocketry",
+    timeline: "2025 – 2026",
+    synopsis: [
+      "This rocket was built to test a deployable payload before it flew on a larger vehicle. A team of us designed and built the test vehicle around a custom flight computer and Piranha line cutters, which release the drogue parachute and the deployable payload during recovery.",
+      "Before the real launch, we ran a ground static test of the deployment system. On the launch itself, the deployable payload ejected and descended successfully.",
+      "To build the airframe accurately, I designed a custom jig that holds the body tube while the fin slots are cut. It keeps the slots precisely placed so the fins stay vertical (aligned with the rocket's axis)."
+    ],
+    roles: [
+      "Worked with a team to design, build, and launch a rocket that tested a deployable payload using a custom flight computer and Piranha line cutters to deploy a drogue parachute and the payload.",
+      "Designed and built a custom jig to cut fin slots into the body tube with precision, keeping the fins vertical.",
+      "Produced a CAD model and engineering drawing of the jig, with dimensions for 1 in \u00d7 2 in board construction and a 45\u00b0 V-cradle that supports the tube.",
+      "Simulated the vehicle in OpenRocket to check stability and predict flight performance.",
+      "Supported the ground static test of the deployment system and the launch, where the payload ejected and descended successfully."
+    ],
+    tools: ["OpenRocket", "CAD", "Custom flight computer", "Piranha line cutters", "Fabrication", "Ground and flight testing"],
+    factsNote: "Values from the OpenRocket simulation.",
+    facts: [
+      { value: "H170M-6", label: "Motor" },
+      { value: "51.021 in \u00d7 6.25 in", label: "Length \u00d7 max diameter" },
+      { value: "120 oz", label: "Mass with motor" },
+      { value: "1.35 cal", label: "Stability" },
+      { value: "874 ft", label: "Simulated apogee" },
+      { value: "234 ft/s (Mach 0.211)", label: "Max velocity" },
+      { value: "167 ft/s\u00b2", label: "Max acceleration" }
+    ],
+    photos: [
+      { src: "dpv/rocket.jpg", thumb: "dpv/g-rocket.jpg", caption: "Completed test vehicle: 51.0 in long with a 6.25 in diameter airframe" },
+      { src: "dpv/openrocket-schematic.jpg", thumb: "dpv/g-openrocket-schematic.jpg", caption: "OpenRocket schematic: H170M-6 motor, 1.35 cal stability, 874 ft simulated apogee", fit: "contain" },
+      { src: "dpv/jig-cad.jpg", thumb: "dpv/g-jig-cad.jpg", caption: "Custom fin-slot jig (CAD): a 45\u00b0 V-cradle holds the body tube so the slots are cut precisely and the fins stay vertical", fit: "contain" },
+      { src: "dpv/jig-drawing.jpg", thumb: "dpv/g-jig-drawing.jpg", caption: "Engineering drawing of the fin-slot jig: 1 in \u00d7 2 in board frame, 45\u00b0 V-cradle, 17.688 in wide by 12.000 in tall", fit: "contain" }
+    ],
+    videos: [
+      { src: "dpv/launch.mp4", poster: "dpv/launch-poster.jpg", caption: "Launch: the deployable payload ejects and descends successfully" },
+      { src: "dpv/static-test.mp4", poster: "dpv/static-test-poster.jpg", caption: "Ground static test of the deployment system before launch" }
+    ],
+    links: []
   }
 ];
