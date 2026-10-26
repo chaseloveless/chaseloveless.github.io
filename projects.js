@@ -183,12 +183,45 @@ window.PROJECTS = [
       { src: "dpv/rocket.jpg", thumb: "dpv/g-rocket.jpg", caption: "Completed test vehicle: 51.0 in long with a 6.25 in diameter airframe" },
       { src: "dpv/openrocket-schematic.jpg", thumb: "dpv/g-openrocket-schematic.jpg", caption: "OpenRocket schematic: H170M-6 motor, 1.35 cal stability, 874 ft simulated apogee", fit: "contain" },
       { src: "dpv/jig-cad.jpg", thumb: "dpv/g-jig-cad.jpg", caption: "Custom fin-slot jig (CAD): a 45\u00b0 V-cradle holds the body tube so the slots are cut precisely and the fins stay vertical", fit: "contain" },
-      { src: "dpv/jig-drawing.jpg", thumb: "dpv/g-jig-drawing.jpg", caption: "Engineering drawing of the fin-slot jig: 1 in \u00d7 2 in board frame, 45\u00b0 V-cradle, 17.688 in wide by 12.000 in tall", fit: "contain" }
+      { src: "dpv/jig-drawing-v2.jpg", thumb: "dpv/g-jig-drawing-v2.jpg", caption: "Engineering drawing of the fin-slot jig: 1 in \u00d7 2 in board frame, 45\u00b0 V-cradle, 17.688 in wide by 12.000 in tall", fit: "contain" }
     ],
     videos: [
       { src: "dpv/launch.mp4", poster: "dpv/launch-poster.jpg", caption: "Launch: the deployable payload ejects and descends successfully" },
       { src: "dpv/static-test.mp4", poster: "dpv/static-test-poster.jpg", caption: "Ground static test of the deployment system before launch" }
     ],
+    links: []
+  },
+  {
+    id: "dissect",
+    title: "Dissect",
+    subtitle: "CAD modeling of a multi-stage gear assembly, and the mechanical engineering behind gears",
+    tags: ["CAD", "Mechanisms", "Gears"],
+    dates: "",
+    summary: "Modeled a complex gear assembly in CAD and learned the mechanical engineering concepts behind how gears work.",
+    cover: "dissect/cover.jpg",
+    coverAlt: "CAD model of a gearbox with spur and bevel gears inside an open housing",
+    role: "Designer (CAD)",
+    org: "",
+    timeline: "",
+    noVideos: true,
+    synopsis: [
+      "Dissect is a project where I learned to model a complex gear assembly in CAD, from the individual gears and shafts to the housing that holds everything in alignment.",
+      "Along the way I learned the mechanical engineering behind gears: how gears transmit motion and torque, how gear ratios trade speed for torque, how compound gear trains reach larger ratios in a compact space, why bevel gears change the direction of rotation, and how tooth geometry and shaft spacing have to agree for gears to mesh properly.",
+      "The finished model combines spur gears, compound pinion stages, and a bevel gear set in one housing, and cutaway views show how the stages connect."
+    ],
+    roles: [
+      "Modeled a multi-stage gear assembly in CAD, including spur gears, pinions, a bevel gear set, shafts, and the housing.",
+      "Assembled the gears, shafts, and housing into a full CAD assembly and used cutaway views to check how the parts fit and mesh.",
+      "Studied gear fundamentals: gear ratios, the speed\u2013torque trade-off, compound gear trains, spur versus bevel gears, tooth geometry, and shaft spacing."
+    ],
+    tools: ["CAD", "Assembly modeling", "Gear design", "Gear trains"],
+    facts: [],
+    photos: [
+      { src: "dissect/cutaway.jpg", thumb: "dissect/g-cutaway.jpg", caption: "Gearbox assembly (cutaway CAD): housing sectioned to reveal the spur gear train and bevel gear stage", fit: "contain" },
+      { src: "dissect/housing-open.jpg", thumb: "dissect/g-housing-open.jpg", caption: "Gearbox with the housing open: a large spur gear driving a compound pinion stage, which feeds a bevel gear", fit: "contain" },
+      { src: "dissect/gear-train.jpg", thumb: "dissect/g-gear-train.jpg", caption: "Gear train removed from the housing: spur gears, compound pinions, and a bevel gear set on their shafts", fit: "contain" }
+    ],
+    videos: [],
     links: []
   }
 ];

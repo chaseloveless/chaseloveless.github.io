@@ -88,6 +88,8 @@ h3 { margin: 0 0 6px; font-size: 1.12rem; line-height: 1.3; }
 /* ---------- Project grid ---------- */
 .project-grid { display: grid; grid-template-columns: repeat(2, 1fr); gap: 64px 56px; padding-top: 8px; }
 .pcard { display: block; color: inherit; }
+/* an odd last card sits centered under the pair above it */
+.project-grid .pcard:last-child:nth-child(odd) { grid-column: 1 / -1; justify-self: center; width: calc((100% - 56px) / 2); }
 .pcard:hover { text-decoration: none; }
 .pcard-cover {
   position: relative; aspect-ratio: 16 / 10; overflow: hidden; border-radius: 4px; background: #eef1f5;
@@ -213,6 +215,7 @@ footer { text-align: center; color: var(--muted); padding: 64px 0 32px; font-siz
   .hero-text { flex: none; }
   .headshot { order: 0; width: 140px; height: 140px; }
   .project-grid { grid-template-columns: 1fr; gap: 44px; }
+  .project-grid .pcard:last-child:nth-child(odd) { width: 100%; }
   .pcard-meta { flex-direction: column; gap: 4px; }
   .timeline li { grid-template-columns: 1fr; gap: 2px; }
   .nav { overflow-x: auto; }
