@@ -31,8 +31,6 @@ window.PROJECTS = [
     factsNote: "Simulation and fabrication results from the Summer Research Expo poster.",
     facts: [
       { value: "370 K", label: "Coolant inlet temperature" },
-      { value: "5.57 g · 3.67 W", label: "Optimal elliptical pipe" },
-      { value: "1.96 g · 1.26 W", label: "Optimal circular pipe" },
       { value: "≈ 71 W/m·K", label: "Optimal thermal conductivity" },
       { value: "400 °C", label: "Welding temperature" }
     ],
