@@ -133,7 +133,7 @@ window.PROJECTS = [
       { value: "289 ft/s²", label: "Max acceleration" }
     ],
     photos: [
-      { src: "l1/launch-pad-solo.jpg", thumb: "l1/g-launch-pad-solo.jpg", caption: "Rocket on Launch Pad" },
+      { src: "l1/launch-pad-single.jpg", thumb: "l1/g-launch-pad-single.jpg", caption: "Rocket on Launch Pad" },
       { src: "l1/openrocket-schematic.jpg", thumb: "l1/g-openrocket-schematic.jpg", caption: "OpenRocket Schematic", fit: "contain" },
       { src: "l1/motor-retainer.jpg", thumb: "l1/g-motor-retainer.jpg", caption: "Custom Motor Retainer", pos: "50% 45%" },
       { src: "l1/centering-rings.jpg", thumb: "l1/g-centering-rings.jpg", caption: "Centering Rings" },
