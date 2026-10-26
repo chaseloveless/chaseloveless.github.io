@@ -146,7 +146,7 @@ updateActive();
             : empty("Photos coming soon.")}
         </section>
 
-        <section class="pv-section">
+        ${p.noVideos ? "" : `<section class="pv-section">
           <h2>Videos</h2>
           ${p.videos.length
             ? `<div class="pv-videos">${p.videos.map(v => `
@@ -155,7 +155,7 @@ updateActive();
                   <figcaption>${esc(v.caption)}</figcaption>
                 </figure>`).join("")}</div>`
             : empty("Videos coming soon.")}
-        </section>
+        </section>`}
 
         ${p.links && p.links.length ? `
         <section class="pv-section">

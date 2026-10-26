@@ -9,9 +9,9 @@ window.PROJECTS = [
     tags: ["Thermal", "Space Systems"],
     dates: "May 2026 – Present",
     summary: "Designed, simulated, and fabricated a lightweight polymer microchannel radiator for rejecting heat from orbital AI data centers.",
-    cover: "images/bargatin-poster.jpg",
-    coverFit: "contain",
-    coverAlt: "Research poster: Lightweight Microchannel Thermal Management for Orbital AI Data Centers",
+    cover: "orbital/radiators-cover.jpg",
+    coverAlt: "Welded polymer microchannel radiator prototypes",
+    noVideos: true,
     role: "Orbital AI Data Center Researcher",
     org: "Bargatin Group, Penn Mechanical Engineering & Applied Mechanics",
     timeline: "May 2026 – Present",
@@ -37,7 +37,10 @@ window.PROJECTS = [
       { value: "400 °C", label: "Welding temperature" }
     ],
     photos: [
-      { src: "images/bargatin-poster.jpg", caption: "Summer Research Expo poster (placeholder; more photos coming)" }
+      { src: "orbital/radiators.jpg", thumb: "orbital/g-radiators.jpg", caption: "Welded Polymer Microchannel Radiators", fit: "contain" },
+      { src: "orbital/cross-section.jpg", thumb: "orbital/g-cross-section.jpg", caption: "Radiator Cross Section", fit: "contain" },
+      { src: "orbital/graphite-tubing.jpg", thumb: "orbital/g-graphite-tubing.jpg", caption: "Graphite-Infused Tubing System" },
+      { src: "images/bargatin-poster.jpg", thumb: "images/bargatin-poster.jpg", caption: "Summer Research Expo Poster", fit: "contain" }
     ],
     videos: [],
     links: [{ label: "Download poster (PDF)", href: "docs/bargatin-poster.pdf" }]
