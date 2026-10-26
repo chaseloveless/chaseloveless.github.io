@@ -198,7 +198,7 @@ window.PROJECTS = [
     tags: ["CAD", "Mechanisms", "Gears"],
     dates: "",
     summary: "Modeled a complex gear assembly in CAD and learned the mechanical engineering concepts behind how gears work.",
-    cover: "dissect/cover.jpg",
+    cover: "dissect/cover-cutaway.jpg",
     coverAlt: "CAD model of a gearbox with spur and bevel gears inside an open housing",
     role: "Designer (CAD)",
     org: "",
