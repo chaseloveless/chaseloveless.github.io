@@ -9,7 +9,7 @@ window.PROJECTS = [
     tags: ["Thermal", "Space Systems"],
     dates: "May 2026 – Present",
     summary: "Designed, simulated, and fabricated a lightweight polymer microchannel radiator for rejecting heat from orbital AI data centers.",
-    cover: "orbital/radiators-cover.jpg",
+    cover: "orbital/radiators-both.jpg",
     coverAlt: "Welded polymer microchannel radiator prototypes",
     noVideos: true,
     role: "Orbital AI Data Center Researcher",
@@ -40,6 +40,7 @@ window.PROJECTS = [
       { src: "orbital/radiators.jpg", thumb: "orbital/g-radiators.jpg", caption: "Welded Polymer Microchannel Radiators", fit: "contain" },
       { src: "orbital/cross-section.jpg", thumb: "orbital/g-cross-section.jpg", caption: "Radiator Cross Section", fit: "contain" },
       { src: "orbital/graphite-tubing.jpg", thumb: "orbital/g-graphite-tubing.jpg", caption: "Graphite-Infused Tubing System" },
+      { src: "orbital/laminar-flow.jpg", thumb: "orbital/g-laminar-flow.jpg", caption: "Laminar Flow Throughout Network", pos: "50% 58%" },
       { src: "images/bargatin-poster.jpg", thumb: "images/bargatin-poster.jpg", caption: "Summer Research Expo Poster", fit: "contain" }
     ],
     videos: [],
