@@ -53,8 +53,8 @@ window.PROJECTS = [
     tags: ["Aerospace", "Recovery"],
     dates: "Sep 2025 – Present",
     summary: "Leading recovery, ejection, and internal systems for ELGSES, an M-class rocket built for the International Rocket Engineering Competition (IREC).",
-    cover: "l3/team.jpg",
-    coverAlt: "The Penn High Power Rocketry team with the ELGSES rocket",
+    cover: "l3/elgses-cover.jpg",
+    coverAlt: "ELGSES rocket CAD render, full length",
     role: "Recovery, Ejection & Internal Systems Team Lead",
     org: "Penn High Power Rocketry",
     timeline: "September 2025 – Present",
@@ -66,6 +66,7 @@ window.PROJECTS = [
     roles: [
       "Promoted to team lead; lead the design, integration, and testing of an M-class L3 rocket to compete in IREC.",
       "Engineered new thread-based ejection canisters that eliminate shock cord entanglement and reduce recovery failure risk within the L3 airframe during pre-flight charge packing.",
+      "Ground-tested the custom ejection canisters with 6 g total of packed black powder to verify charge performance before flight.",
       "Redesigned a split avionics bay to integrate a new airbrake system while maintaining structural alignment and recovery-system functionality.",
       "Represented Penn at IREC 2026 in Midland, TX, presenting the ejection canister design and its implementation to competition judges.",
       "Led recovery system integration at the launch site, including black powder ejection charge packing, parachute, and nose-cone bulkhead installation."
@@ -82,15 +83,20 @@ window.PROJECTS = [
       { value: "271 ft/s²", label: "Max acceleration" }
     ],
     photos: [
-      { src: "l3/elgses-pad.jpg", thumb: "l3/g-elgses-pad.jpg", caption: "ELGSES on the Launch Pad", pos: "50% 55%" },
-      { src: "l3/team.jpg", thumb: "l3/g-team.jpg", caption: "ELGSES with the Penn High Power Rocketry Team" },
-      { src: "l3/openrocket-schematic.jpg", thumb: "l3/g-openrocket-schematic.jpg", caption: "OpenRocket Schematic", fit: "contain" }
+      { src: "l3/elgses-pad.jpg", thumb: "l3/g-elgses-pad.jpg", caption: "ELGSES vertical on the launch rail prior to flight", pos: "50% 55%" },
+      { src: "l3/team.jpg", thumb: "l3/g-team.jpg", caption: "ELGSES with the Penn High Power Rocketry team" },
+      { src: "l3/elgses-cad.jpg", thumb: "l3/g-elgses-cad.jpg", caption: "ELGSES CAD: exterior render (top) and sectioned assembly (bottom) showing the internal avionics, recovery, and motor sections", fit: "contain" },
+      { src: "l3/openrocket-schematic.jpg", thumb: "l3/g-openrocket-schematic.jpg", caption: "OpenRocket schematic: 151 in length, 6.17 in diameter, M2500T-P motor, 8,420 ft simulated apogee", fit: "contain" },
+      { src: "l3/bulkhead-iso.jpg", thumb: "l3/g-bulkhead-iso.jpg", caption: "Custom thread-based ejection charge bulkhead (isometric CAD): two canister bosses of different heights on a mounting plate within the bulkhead ring", fit: "contain" },
+      { src: "l3/bulkhead-section.jpg", thumb: "l3/g-bulkhead-section.jpg", caption: "Custom thread-based ejection charge bulkhead (section view): threaded interfaces of the two ejection canisters", fit: "contain" },
+      { src: "l3/competition-poster.jpg", thumb: "l3/g-competition-poster.jpg", caption: "IREC competition poster, Team 90: vehicle specifications, payloads, avionics, airbrakes, and fin can", pos: "50% 0%" }
     ],
     videos: [
       { src: "l3/launch.mp4", poster: "l3/launch-poster.jpg", caption: "Launch" },
-      { src: "l3/drogue-static-test.mp4", poster: "l3/drogue-static-test-poster.jpg", caption: "Drogue Static Test" }
+      { src: "l3/drogue-static-test.mp4", poster: "l3/drogue-static-test-poster.jpg", caption: "Drogue Static Test" },
+      { src: "l3/ejection-canister-test.mp4", poster: "l3/ejection-canister-test-poster.jpg", caption: "Ejection canister test: custom canisters with 6 g total of packed black powder" }
     ],
-    links: []
+    links: [{ label: "Download IREC competition poster (PDF)", href: "docs/elgses-competition-poster.pdf" }]
   },
   {
     id: "l1-rocket",
